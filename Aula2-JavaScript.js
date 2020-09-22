@@ -1,6 +1,6 @@
 //Aula de JavaScript
 
-//Exercício 1
+//Exercício 1 - Desenvolver uma solução JavaScript que defina que ao chover é necessário tirar as roupas do varal
 function funcao(){
     var chover = confirm("Está chovendo?");
 
@@ -12,7 +12,7 @@ function funcao(){
     }
 }
 
-//Execício 2
+//Execício 2 - Desenvolver uma solução JavaScript que defina que pessoas com menos de 18 anos não podem comprar bebida alcoolica
 
 function funcao(){
     var idade = prompt("Quantos anos vc tem?")
@@ -25,7 +25,7 @@ function funcao(){
     }
 }
 
-//Exercício 3
+//Exercício 3 - Desenvolver uma solução JavaScript que compare a idade e altura mínima para uma pessoa ingressar em determinada montanha russa.
 function funcao(){
     var idade = prompt("Quantos anos vc tem?")
     var altura = prompt("Qual a sua altura? (Escreva sem virgula ou ponto)")
@@ -41,7 +41,7 @@ function funcao(){
     }
 }
 
-//Exercício 4
+//Exercício 4 - Desenvolver uma solução JavaScript que compare a quantidade de pontos na carteira de motorista de alguém e retorne se ela pode ou não continuar dirigindo
 function funcao(){
     var pontos = prompt("Quantos pontos na carteira vc tem?")
 
@@ -53,7 +53,7 @@ function funcao(){
     }
 }
 
-//Exercício 5
+//Exercício 5 - Desenvolver uma solução JavaScript que valide se alguém esta usando blusa de frio apenas em dias frios
 function funcao(){
     var frio = confirm("Está frio?");
     var blusa = confirm("Está com blusa de frio?");
@@ -78,7 +78,7 @@ function funcao(){
     }
 }
 
-//Exercício 6
+//Exercício 6 - Desenvolver uma solução JavaScript que tome uma ação baseada no nível de satisfação do cliente
 function funcao(){
     var satisfacao = prompt("De 1 a 5, o quanto vc está satisfeito?")
 
