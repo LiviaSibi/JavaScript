@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Desafio JS - PetShop</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Nome do pet</label>
+                        <input type="text" name="nomePet" id="nomePet">
+                    </div>
+
+                    <div>
+                        <label>Nome do dono(a)</label>
+                        <input type="text" name="nomeDono" id="nomeDono">
+                    </div>
+
+                    <div>
+                        <label>Raca</label>
+                        <input type="text" name="raca" id="raca">
+                    </div>
+
+                    <div>
+                        <label>Idade</label>
+                        <input type="text" name="idade" id="idade">
+                    </div>
+
+                    <div>
+                        <label>Cor</label>
+                        <input type="text" name="cor" id="cor">
+                    </div>
+
+                    <div>
+                        <label>Porte</label>
+                        <input type="text" name="porte" id="porte">
+                    </div>
+
+                    <div>
+                        <label>Massa(kg)</label>
+                        <input type="text" name="massa" id="massa">
+                    </div>
+
+                    <div>
+                        <label>Tipo do pet (cachorro/gato)</label>
+                        <input type="text" name="tipo" id="tipo">
+                    </div>
+
+                    <div>
+                        <label>Sexo</label>
+                        <input type="text" name="sexo" id="sexo">
+                    </div>
+
+                    <div>
+                        <label>Descrição</label>
+                        <input type="text" name="descricao" id="descricao">
+                    </div>
+
+                    <div class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+
+            <td>
+                <table class="list" id="dadosList">
+                    <thead>
+                        <tr>
+                            <th>Nome do Pet</th>
+                            <th>Nome do dono(a)</th>
+                            <th>Raça</th>
+                            <th>Idade</th>
+                            <th>Cor</th>
+                            <th>Porte</th>
+                            <th>Massa(kg)</th>
+                            <th>Tipo do pet</th>
+                            <th>Sexo</th>
+                            <th>Descrição</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+        <script src="script.js"></script>
+</body>
+</html>

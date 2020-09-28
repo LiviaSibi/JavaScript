@@ -1,80 +1,79 @@
 <!DOCTYPE html>
   <html lang="pt-br">
-  <head>
+    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Entendo o DOM (Document Object Model)</title>
-  </head>
-  <body>
+    </head>
+    <body>
       <div class="container">
-            <h1>
-                <p style="display: inline-block;" id="Horas">00</p>
-                <p style="display: inline-block;" id="Minutos">:00</p>
-                <p style="display: inline-block;" id="Segundos">:00</p>
-            </h1>
-          <button id="start" onclick="start()">Start</button>
-          <button id="stop" onclick="stop()" disabled>Stop</button>
-          <button id="reset" onclick="reset()">Reset</button>
-        </div>
-  </body>
-  <script>
-        let s = 0
-        let m = 0
-        let h = 0
-        
-        function start(){
-            control = setInterval(cronometro,1000);
-            document.getElementById('start').disabled = true
-            document.getElementById('stop').disabled = false
-        }
-
-        function stop(){
-            clearInterval(control);
-            document.getElementById('stop').disabled = true
-        }
-
-        function reset(){
-            stop();
-            s = 0
-            m = 0
-            h = 0
-            Horas.innerHTML = '00'
-            Minutos.innerHTML = ':00'
-            Segundos.innerHTML = ':00'
-            document.getElementById('start').disabled = false
-            document.getElementById('stop').disabled = true
-        }
-
-        function cronometro(){
-            if(s < 60){
-                s ++;
-                if (s < 10) { 
-                    s = "0"+ s 
-                }
-                Segundos.innerHTML = ":"+ s;
-            }
-            if (s == 59) {
-                s = -1;
-            }
-            if (s == 0) {
-                m++;
-                if (m < 10) { 
-                    m = "0"+ m 
-                }
-                Minutos.innerHTML = ":"+ m;
-            }
-            if (m == 59) {
-                m = -1;
-            }
-            if ( (s == 0) && (m == 0) ) {
-                h ++;
-                if (h < 10) { 
-                    h = "0" + h 
-                }
-                Horas.innerHTML = h;
-            }
-        }
+        <h1>
+          <p style="display: inline-block;" id="Horas">00</p>
+          <p style="display: inline-block;" id="Minutos">:00</p>
+          <p style="display: inline-block;" id="Segundos">:00</p>
+        </h1>
+        <button id="start" onclick="start()">Start</button>
+        <button id="stop" onclick="stop()" disabled>Stop</button>
+        <button id="reset" onclick="reset()">Reset</button>
+      </div>
+    </body>
+    <script>
+      let s = 0
+      let m = 0
+      let h = 0
       
-  </script>
+      function start(){
+        control = setInterval(cronometro,1000);
+        document.getElementById('start').disabled = true
+        document.getElementById('stop').disabled = false
+      }
+
+      function stop(){
+        clearInterval(control);
+        document.getElementById('stop').disabled = true
+      }
+
+      function reset(){
+        stop();
+        s = 0
+        m = 0
+        h = 0
+        Horas.innerHTML = '00'
+        Minutos.innerHTML = ':00'
+        Segundos.innerHTML = ':00'
+        document.getElementById('start').disabled = false
+        document.getElementById('stop').disabled = true
+      }
+
+      function cronometro(){
+        if(s < 60){
+          s ++;
+          if (s < 10) { 
+            s = "0"+ s 
+          }
+          Segundos.innerHTML = ":"+ s;
+        }
+        if (s == 59) {
+          s = -1;
+        }
+        if (s == 0) {
+          m++;
+          if (m < 10) { 
+            m = "0"+ m 
+          }
+          Minutos.innerHTML = ":"+ m;
+        }
+        if (m == 59) {
+          m = -1;
+        }
+        if ( (s == 0) && (m == 0) ) {
+          h ++;
+          if (h < 10) { 
+            h = "0" + h 
+          }
+          Horas.innerHTML = h;
+        }
+      }
+    </script>
   </html>

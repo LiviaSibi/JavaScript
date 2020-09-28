@@ -1,0 +1,88 @@
+<!-- Apenas mostra as informações cadastradas na tela  -->
+
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Desafio JavaScript - PetShop</title>
+  </head>
+
+  <body>
+      <h1>PetShop</h1>
+      <form id="form">
+        Nome do Pet: <input type="text" name="nomePet" value=" ">
+
+        <br/>
+        <br/>
+
+        Nome do Dono: <input type="text" name="nomeDono" value=" ">
+
+        <br/>
+        <br/>
+
+        Raça: <input type="text" name="raca" value=" ">
+
+        <br/>
+        <br/>
+
+        Idade do Animal: <input type="number" name="idade" value=" ">
+
+        <br/>
+        <br/>
+
+        Cor do Animal: <input type="text" name="cor" value=" ">
+
+        <br/>
+        <br/>
+
+        Porte do Animal: <input type="text" name="porte" value=" ">
+
+        <br/>
+        <br/>
+
+        Peso(kg) do animal: <input type="text" name="peso" value=" ">
+
+        <br/>
+        <br/>
+
+        Tipo de Pet: 
+        <select id="tipo">
+          <option value="" disabled selected>Selecione</option>
+          <option value="gato">Gato</option>
+          <option value="cachorro">Cachorro</option>
+        </select>
+
+        <br/>
+        <br/>
+
+        Sexo: 
+        <select id="sexo">
+            <option value="" disabled selected>Selecione</option>
+            <option value="Femea">Femea</option>
+            <option value="Macho">Macho</option>
+          </select>
+
+        <br/>
+        <br/>
+
+        Descrição: 
+        <br/>
+        <textarea cols="60" rows="7" value=" "></textarea>
+      </form>
+      <button onclick="salvar()">Enviar</button>
+      <p id="demo"></p>
+      <br/>
+  </body>
+
+  <script>
+    function salvar() {
+      let form = document.getElementById('form')
+      var text = "";
+      var i;
+      for (i = 0; i < form.length ;i++) {
+        text += form.elements[i].value + "<br>";
+      }
+      document.getElementById("demo").innerHTML = text;
+      
+    }
+  </script>
+</html>

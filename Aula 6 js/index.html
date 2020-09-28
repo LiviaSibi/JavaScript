@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <title>Manipulando o Estilo do Site</title>
+    </head>
+    <body>
+      <div id="manipula">Eu sou a frase do exemplo. Serei alterada quando você clicar.</div>
+      <hr>
+
+      <h2>Altere a frase acima clicando nos botões</h2>
+
+      <button id="mudaCor" onclick="mudaCor()">Mudar cor da fonte </button>
+      <input id="voltaCor" type="button" style="display: none" value="Voltar cor da fonte" onclick="voltaCor()" />
+
+      <br>
+
+      <input id="mudaTamanho" type="button" value="Mudar tamanho da fonte" onclick="mudaTamanhoFonte()"/>
+      <input id="voltaTamanho" type="button" style="display:none" value="Voltar tamanho da fonte" onclick="voltaTamanhoFonte()" />
+
+      <br>
+
+      <input id="mudaBack" type="button" value="Mudar background" onclick="mudaBackground()"/>
+      <input id="voltaBack" type="button" style="display: none" value="Voltar Background" onclick="voltaBackground()" />
+
+      <br>
+
+      <input id="mudaItalico" type="button" value="Letra em itálico" onclick="mudaItalico()"/>
+      <input id="voltaNormal" type="button" style="display: none" value="Letra normal" onclick="voltaNormal()" />
+
+      <br>
+
+      <input id="colocaBorda" type="button" value="Colocar borda" onclick="colocaBorder()"/>
+      <input id="excluiBorda" type="button" style="display: none" value="Exclui borda" onclick="excluiBorder()"/>
+
+      <br>
+
+      <input id="mudaBorda" type="button" value="Mudar a cor da borda" onclick="mudaCorBorder()"/>
+      <input id="voltaBorda" type="button" style="display: none" value="Voltar a cor da borda" onclick="voltarCorBorder()"/>
+
+      <br>
+      
+      <input id="escondeDiv" type="button" value="Esconde a div" onclick="escondeDiv()"/>
+      <input id="reapareceDiv" type="button" style="display: none" value="Reaparece com a div" onclick="reapareceDiv()"/>
+
+      <script>
+        // --------------------Cor da Fonte---------------------------
+        function mudaCor() {
+          document.getElementById("manipula").style.color = "#ffffff";
+          document.getElementById("mudaCor").style.display = "none";
+          document.getElementById("voltaCor").style.display = "block";
+        }
+
+        function voltaCor() {
+          document.getElementById("manipula").style.color = "#ffff00";
+          document.getElementById("mudaCor").style.display = "block";
+          document.getElementById("voltaCor").style.display = "none";
+        }
+
+        //-----------------------Tamanho Fonte-----------------------
+        function mudaTamanhoFonte() {
+          document.getElementById("manipula").style.fontSize = "20pt";
+          document.getElementById("mudaTamanho").style.display = "none";
+          document.getElementById("voltaTamanho").style.display = "block";
+        }
+
+        function voltaTamanhoFonte() {
+          document.getElementById("manipula").style.fontSize = "10pt";
+          document.getElementById("mudaTamanho").style.display = "block";
+          document.getElementById("voltaTamanho").style.display = "none";
+        }
+        
+        //-------------------------Cor Background-------------------------
+        function mudaBackground() {
+          document.getElementById("manipula").style.backgroundColor = "green";
+          document.getElementById('mudaBack').style.display = 'none';
+          document.getElementById('voltaBack').style.display = 'block';
+        }
+
+        function voltaBackground() {
+          document.getElementById("manipula").style.backgroundColor = "red";
+          document.getElementById('mudaBack').style.display = 'block';
+          document.getElementById('voltaBack').style.display = 'none';
+        }
+        
+        ///--------------------------Italico--------------------------
+        function mudaItalico() {
+          document.getElementById("manipula").style.fontStyle = "italic";
+          document.getElementById("mudaItalico").style.display = "none";
+          document.getElementById("voltaNormal").style.display = "block";
+        }
+
+        function voltaNormal() {
+          document.getElementById("manipula").style.fontStyle = "normal";
+          document.getElementById("mudaItalico").style.display = "block";
+          document.getElementById("voltaNormal").style.display = "none";
+        }
+
+        //--------------------------Coloca e Exclui Borda--------------------------
+        function colocaBorder() {
+          document.getElementById("manipula").style.border = "2px solid #000000";
+          document.getElementById("colocaBorda").style.display = "none";
+          document.getElementById("excluiBorda").style.display = "block";
+        }
+
+        function excluiBorder() {
+          document.getElementById("manipula").style.border = "0px";
+          document.getElementById("colocaBorda").style.display = "block";
+          document.getElementById("excluiBorda").style.display = "none";
+        }
+
+        //--------------------------Cor da borda--------------------------
+        function mudaCorBorder() {
+          document.getElementById("manipula").style.border = "2px solid #0000ff";
+          document.getElementById("mudaBorda").style.display = "none";
+          document.getElementById("voltaBorda").style.display = "block";
+        }
+
+        function voltarCorBorder() {
+          document.getElementById("manipula").style.border = "2px solid #000000";
+          document.getElementById("mudaBorda").style.display = "block";
+          document.getElementById("voltaBorda").style.display = "none";
+        }
+
+        //--------------------------Esconde e Reaparece Div--------------------------
+        function escondeDiv() {
+          document.getElementById("manipula").style.display = "none";
+          document.getElementById("escondeDiv").style.display = "none";
+          document.getElementById("reapareceDiv").style.display = "block";
+        }
+
+        function reapareceDiv() {
+          document.getElementById("manipula").style.display = "block";
+          document.getElementById("escondeDiv").style.display = "block";
+          document.getElementById("reapareceDiv").style.display = "none";
+        }
+      </script>
+    </body>
+  </html>
