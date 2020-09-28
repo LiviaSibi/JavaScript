@@ -46,6 +46,10 @@
       <input id="escondeDiv" type="button" value="Esconde a div" onclick="escondeDiv()"/>
       <input id="reapareceDiv" type="button" style="display: none" value="Reaparece com a div" onclick="reapareceDiv()"/>
 
+      <br>
+
+      <button id="reset" onclick="reset()">Reset</button>
+
       <script>
         // --------------------Cor da Fonte---------------------------
         function mudaCor() {
@@ -136,6 +140,10 @@
           document.getElementById("manipula").style.display = "block";
           document.getElementById("escondeDiv").style.display = "block";
           document.getElementById("reapareceDiv").style.display = "none";
+        }
+
+        function reset() {
+          window.location.reload(true);
         }
       </script>
     </body>
