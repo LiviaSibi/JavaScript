@@ -67,22 +67,22 @@ var minhaPromise = function() {
 }
 
 document.getElementById('searchButton2').onclick = function() {
-     minhaPromise()
-     .then(function(response){
-          document.getElementById("lblLoading").innerHTML="";
-          const repos = response;
-          for(let repo of repos) {
-          let liElement = document.createElement('li');
-          let textItem = document.createTextNode(repo.name);
-          liElement.appendChild(textItem);
-          divElement.appendChild(liElement);
-          };
-     })
-     .catch(function(error){
-          document.getElementById("lblLoading").innerHTML="";
-          let user = inputElement.value;
-          if(error.status == 404){
-               document.getElementById("errorMessage").innerHTML="Usuário (" + user + ") não existe."
-          }
-     });
+  minhaPromise()
+  .then(function(response){
+    document.getElementById("lblLoading").innerHTML="";
+    const repos = response;
+    for(let repo of repos) {
+      let liElement = document.createElement('li');
+      let textItem = document.createTextNode(repo.name);
+      liElement.appendChild(textItem);
+      divElement.appendChild(liElement);
+    };
+  })
+  .catch(function(error){
+    document.getElementById("lblLoading").innerHTML="";
+    let user = inputElement.value;
+    if(error.status == 404){
+      document.getElementById("errorMessage").innerHTML="Usuário (" + user + ") não existe."
+    }
+  });
 }
