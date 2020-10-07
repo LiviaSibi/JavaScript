@@ -2,14 +2,14 @@ import React from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
-function Home() {
+function Login() {
   return (
-    <div className="Home">
+    <div className="Login">
       <Header/>
-      <h1>Home</h1>
+      <h1>Login</h1>
       <Footer/>
     </div>
   );
 }
 
-export default Home;
+export default Login;
