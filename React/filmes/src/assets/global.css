@@ -4,15 +4,12 @@
   box-sizing: border-box;
 }
 
-.centro{
-  width: 1024px;
-  margin: auto;
-  display: flex;
-  justify-content: center;
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
-h1{
+.centro{
   display: flex;
   justify-content: center;
-  margin: 132px;
+  align-items: center;
 }
