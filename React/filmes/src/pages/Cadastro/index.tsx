@@ -22,7 +22,7 @@ function Cadastro() {
                 <option value="usuario">Usuário</option>
             </select>
           <Input type="password" label="Senha" name="senha"/>
-          <Button value="Enviar"/>
+          <Button onClick="" value="Enviar"/>
         </div>
       </div>
       <Footer/>

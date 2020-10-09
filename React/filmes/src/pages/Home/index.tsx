@@ -9,7 +9,9 @@ import './style.css'
 function Home() {
   return (
     <div className="Home">
-      <Header description="Conheça nossa coletânea"/>
+      <Header description="Conheça nossa coletânea">
+        <p>Bem vindo!</p>
+      </Header>
       <div className="centro">
         <div className="home">
           <h1>Monte sua coletânea de filmes...</h1>

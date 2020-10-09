@@ -4,8 +4,12 @@ import '../../assets/global.css';
 import './style.css';
 import {Link} from 'react-router-dom';
 
+// description = props obrigatoria
+// text = props não obrigatoria (é a ?)
+// children = tudo oq é escrito dentro das tags do header na página
 interface HeaderProps {
   description: string;
+  text?: string
 }
 
 const Header: React.FunctionComponent<HeaderProps> = (props) => {
@@ -22,6 +26,8 @@ const Header: React.FunctionComponent<HeaderProps> = (props) => {
             </ul>
           </nav>
           <h3>{props.description}</h3>
+          {props.children}
+          {props.text && <p>{props.text}</p>}
         </div>
       </div>
     </div>
