@@ -3,14 +3,13 @@ import '../../assets/global.css';
 import './style.css';
 
 interface ButtonProps {
-  onClick: any
   value: string;
 }
 
-const Button: React.FunctionComponent<ButtonProps> = ({onClick, value}) => {
+const Button: React.FunctionComponent<ButtonProps> = ({value}) => {
   return (
-    <div className="button">
-        <button onClick={onClick}>{value}</button>
+    <div className="btn">
+      <input className="button" type="submit" value={value}/>
     </div>
   );
 }

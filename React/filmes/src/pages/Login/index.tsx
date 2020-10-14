@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useHistory} from 'react-router-dom';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Input from '../../components/Input';
@@ -7,9 +8,33 @@ import './style.css'
 
 function Login() {
 
-  //Demosntração do useState: Declarar 2 variaveis (nesse caso cont (que é a variavel inicial) e setCont (que irá fazer a contagem)) e setar o estado inicial (useState(0))
-  //Essa demonstração irá contar o número de cliques de um botão
-  const [cont, setCont] = useState(0);
+  let history = useHistory();
+
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+
+  const login = () => {
+    const login ={
+      email: email,
+      senha: senha
+    }
+  
+
+    fetch('http://localhost:5000/api/conta/login', {
+      method: 'POST',
+      body: JSON.stringify(login),
+      headers: {
+        'content-type': 'application/json'
+      },
+    })
+
+    .then (response => response.json())
+    .then (dados => {
+      localStorage.setItem('token-filmes', dados.token)
+      history.push('/')
+    })
+    .catch(err => console.log(err))
+  }
 
   return (
     <div>
@@ -17,13 +42,14 @@ function Login() {
       <div className="centro">
         <div className="login">
           <h1>Login</h1>
-          <Input type="email" label="E-mail" name="email"/>
-          <Input type="password" label="Senha" name="senha"/>
-
-          {/* fazer o setCont como uma arrow function que fará algo (nesse caso add +1 ao cont quando for clicado) */}
-          <Button onClick={() => setCont(cont + 1)} value="Enviar"/>
-          <p>Você clicou {cont} vezes</p>
-
+          <form onSubmit={ event => {
+            event.preventDefault();
+            login();
+          }}>
+            <Input type="email" label="E-mail" name="email" onChange={e => setEmail(e.target.value)}/>
+            <Input type="password" label="Senha" name="senha" onChange={e => setSenha(e.target.value)}/>
+            <Button value="Enviar"/>
+          </form>
         </div>
       </div>
       <Footer/>
