@@ -31,7 +31,7 @@ function Login() {
     .then (response => response.json())
     .then (dados => {
       localStorage.setItem('token-filmes', dados.token)
-      history.push('/')
+      history.push('/perfil')
     })
     .catch(err => console.log(err))
   }
