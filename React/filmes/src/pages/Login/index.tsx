@@ -30,10 +30,15 @@ function Login() {
 
     .then (response => response.json())
     .then (dados => {
-      localStorage.setItem('token-filmes', dados.token)
-      history.push('/perfil')
+      if (dados.token !== undefined) {
+        localStorage.setItem('token-filmes', dados.token)
+        history.push('/')
+      }
+      else{
+        alert('Senha ou e-mail inválido');
+      }
     })
-    .catch(err => console.log(err))
+    .catch(err => console.error(err))
   }
 
   return (

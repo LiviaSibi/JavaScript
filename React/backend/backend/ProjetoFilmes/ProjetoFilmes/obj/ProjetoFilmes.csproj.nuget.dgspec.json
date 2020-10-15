@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rui\\Documents\\Projetos-Livia\\JavaScript\\React\\backend\\backend\\ProjetoFilmes\\ProjetoFilmes\\ProjetoFilmes.csproj": {}
+    "C:\\Users\\fic\\Documents\\Exercicios-Dev-Manha-Livia\\JavaScript\\React\\backend\\backend\\ProjetoFilmes\\ProjetoFilmes\\ProjetoFilmes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rui\\Documents\\Projetos-Livia\\JavaScript\\React\\backend\\backend\\ProjetoFilmes\\ProjetoFilmes\\ProjetoFilmes.csproj": {
+    "C:\\Users\\fic\\Documents\\Exercicios-Dev-Manha-Livia\\JavaScript\\React\\backend\\backend\\ProjetoFilmes\\ProjetoFilmes\\ProjetoFilmes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rui\\Documents\\Projetos-Livia\\JavaScript\\React\\backend\\backend\\ProjetoFilmes\\ProjetoFilmes\\ProjetoFilmes.csproj",
+        "projectUniqueName": "C:\\Users\\fic\\Documents\\Exercicios-Dev-Manha-Livia\\JavaScript\\React\\backend\\backend\\ProjetoFilmes\\ProjetoFilmes\\ProjetoFilmes.csproj",
         "projectName": "ProjetoFilmes",
-        "projectPath": "C:\\Users\\rui\\Documents\\Projetos-Livia\\JavaScript\\React\\backend\\backend\\ProjetoFilmes\\ProjetoFilmes\\ProjetoFilmes.csproj",
-        "packagesPath": "C:\\Users\\rui\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rui\\Documents\\Projetos-Livia\\JavaScript\\React\\backend\\backend\\ProjetoFilmes\\ProjetoFilmes\\obj\\",
+        "projectPath": "C:\\Users\\fic\\Documents\\Exercicios-Dev-Manha-Livia\\JavaScript\\React\\backend\\backend\\ProjetoFilmes\\ProjetoFilmes\\ProjetoFilmes.csproj",
+        "packagesPath": "C:\\Users\\fic\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fic\\Documents\\Exercicios-Dev-Manha-Livia\\JavaScript\\React\\backend\\backend\\ProjetoFilmes\\ProjetoFilmes\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\rui\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fic\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -103,7 +100,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
