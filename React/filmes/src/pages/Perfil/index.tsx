@@ -11,11 +11,30 @@ function Perfil() {
   const [idUsuario, setIdUsuario] = useState(0);
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
-  const [tipo, setTipo] = useState('');
+  const [permissao, setPermissao] = useState('');
   const [senha, setSenha] = useState('');
+  const [usuarios, setUsuarios] = useState([]);
+
+  useEffect(() => {
+    listar();
+  }, [])
+
+  const listar = () => {
+    fetch('http://localhost:5000/api/usuarios',{
+      method: 'GET',
+      headers: {
+        authorization: 'Bearer' + localStorage.getItem('token-filmes')
+      }
+    })
+    .then(response => response.json())
+    .then(dados => {
+      setUsuarios(dados);
+    })
+    .catch(erro => console.error(erro))
+  }
 
   const update = (id:number) => {
-    fetch('http://localhost:5000/api/perfil/' + id, {
+    fetch('http://localhost:5000/api/usuarios/' + id, {
       method: 'GET',
       headers: {
         authorization: 'Bearer' + localStorage.getItem('token-filmes')
@@ -27,7 +46,7 @@ function Perfil() {
       setIdUsuario(dados.nome);
       setIdUsuario(dados.email);
       setIdUsuario(dados.senha);
-      setIdUsuario(dados.tipo);
+      setIdUsuario(dados.permissao);
     })
     .catch(erro => console.error(erro))
   }
@@ -37,10 +56,10 @@ function Perfil() {
       nome: nome,
       email: email,
       senha: senha,
-      senha: senha,
+      permissao: permissao,
     };
 
-    fetch('http://localhost:5000/api/generos/' + idUsuario, {
+    fetch('http://localhost:5000/api/usuarios/' + idUsuario, {
       method: 'PUT',
       body:JSON.stringify(form),
       headers: {
@@ -49,8 +68,11 @@ function Perfil() {
       }
     })
     .then(() => {
-      setIdGenero(0);
-      setGenero('');
+      setIdUsuario(0);
+      setNome('');
+      setEmail('');
+      setSenha('');
+      setPermissao('');
       listar()
     })
     .catch(erro => console.error(erro))
