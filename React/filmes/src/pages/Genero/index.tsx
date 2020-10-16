@@ -51,7 +51,7 @@ function Genero() {
 
   const update = (id:number) => {
     fetch('http://localhost:5000/api/generos/' + id, {
-      method: 'PUT',
+      method: 'GET',
       headers: {
         authorization: 'Bearer' + localStorage.getItem('token-filmes')
       }

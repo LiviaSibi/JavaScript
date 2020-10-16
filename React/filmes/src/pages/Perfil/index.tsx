@@ -8,11 +8,53 @@ import './style.css'
 
 function Perfil() {
 
-  const [idPerfil, setIdPerfil] = useState(0);
+  const [idUsuario, setIdUsuario] = useState(0);
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [tipo, setTipo] = useState('');
   const [senha, setSenha] = useState('');
+
+  const update = (id:number) => {
+    fetch('http://localhost:5000/api/perfil/' + id, {
+      method: 'GET',
+      headers: {
+        authorization: 'Bearer' + localStorage.getItem('token-filmes')
+      }
+    })
+    .then(response => response.json())
+    .then(dados => {
+      setIdUsuario(dados.idUsuario);
+      setIdUsuario(dados.nome);
+      setIdUsuario(dados.email);
+      setIdUsuario(dados.senha);
+      setIdUsuario(dados.tipo);
+    })
+    .catch(erro => console.error(erro))
+  }
+
+  const salvar = () => {
+    const form = {
+      nome: nome,
+      email: email,
+      senha: senha,
+      senha: senha,
+    };
+
+    fetch('http://localhost:5000/api/generos/' + idUsuario, {
+      method: 'PUT',
+      body:JSON.stringify(form),
+      headers: {
+        'content-type': 'application/json',
+        authorization: 'Bearer' + localStorage.getItem('token-filmes')
+      }
+    })
+    .then(() => {
+      setIdGenero(0);
+      setGenero('');
+      listar()
+    })
+    .catch(erro => console.error(erro))
+  }
 
   return (
     <div className="Perfil">
