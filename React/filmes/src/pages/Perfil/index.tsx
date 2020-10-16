@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Input from '../../components/Input';
@@ -7,6 +7,13 @@ import '../../assets/global.css'
 import './style.css'
 
 function Perfil() {
+
+  const [idPerfil, setIdPerfil] = useState(0);
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
+  const [tipo, setTipo] = useState('');
+  const [senha, setSenha] = useState('');
+
   return (
     <div className="Perfil">
       <Header description="Edite seu perfil"/>
