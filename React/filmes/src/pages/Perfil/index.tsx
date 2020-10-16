@@ -84,17 +84,22 @@ function Perfil() {
       <div className="centro">
         <div className="perfil">
           <h1>Perfil</h1>
-          <Input type="text" label="Nome" name="nome"/>
-          <Input type="email" label="E-mail" name="email"/>
-            <label>Permissão</label> 
-            <br/>
-            <select id="permissao">
-                <option value="" disabled selected>Selecione</option>
-                <option value="adm">Administrador</option>
-                <option value="usuario">Usuário</option>
-            </select>
-          <Input type="password" label="Senha" name="senha"/>
-          <Button value="Enviar"/>
+          <form onSubmit={ event => {
+            event.preventDefault();
+            salvar();
+          }}>
+            <Input type="text" label="Nome" name="nome" value={nome} onChange={e => setNome(e.target.value)}/>
+            <Input type="email" label="E-mail" name="email" value={email} onChange={e => setEmail(e.target.value)}/>
+              <label>Permissão</label> 
+              <br/>
+              <select id="permissao" value={permissao} onChange={e => setPermissao(e.target.value)}>
+                  <option value="" disabled selected>Selecione</option>
+                  <option value="adm">Administrador</option>
+                  <option value="usuario">Usuário</option>
+              </select>
+            <Input type="password" label="Senha" name="senha" value={senha} onChange={e => setSenha(e.target.value)}/>
+            <Button value="Enviar"/>
+          </form>
         </div>
       </div>
       <Footer/>

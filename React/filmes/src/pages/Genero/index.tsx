@@ -93,10 +93,11 @@ function Genero() {
     <div className="Genero">
       <Header description="Cadastre os gêneros dos filmes"/>
       <main>
-        <h1>Generos</h1>
+        <h1>Gêneros</h1>
         <div className="centro">
           <img className="theater" src={theater} alt="generos"/>
         </div>
+        <h2>Lista de Gêneros</h2>
         <table>
           <thead>
             <tr>
@@ -126,7 +127,7 @@ function Genero() {
           event.preventDefault();
           salvar();
         }}>
-          <Input type="text" label="Nome do Gênero" name="genero" value= {genero} onChange={e => setGenero(e.target.value)}/>
+          <Input type="text" label="Cadastrar Gênero" name="genero" placeholder="Gênero" value= {genero} onChange={e => setGenero(e.target.value)}/>
           <div className="btn">
             <Button value="Salvar"/>
           </div>

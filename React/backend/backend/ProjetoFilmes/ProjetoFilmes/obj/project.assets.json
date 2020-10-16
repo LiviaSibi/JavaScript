@@ -8441,7 +8441,6 @@
       "path": "system.collections.nongeneric/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -8800,7 +8799,6 @@
       "path": "system.diagnostics.contracts/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -8952,7 +8950,6 @@
       "path": "system.diagnostics.fileversioninfo/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -12057,7 +12054,6 @@
       "path": "system.threading.tasks.parallel/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -12309,7 +12305,6 @@
       "path": "system.xml.xmldocument/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -12348,7 +12343,6 @@
       "path": "system.xml.xpath/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -12436,19 +12430,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fic\\.nuget\\packages\\": {}
+    "C:\\Users\\priscila.gigueira\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fic\\Documents\\Exercicios-Dev-Manha-Livia\\JavaScript\\React\\backend\\backend\\ProjetoFilmes\\ProjetoFilmes\\ProjetoFilmes.csproj",
+      "projectUniqueName": "C:\\Users\\priscila.gigueira\\Desktop\\SENAI-ESTUDOS\\backend\\01.filmes\\backend\\ProjetoFilmes\\ProjetoFilmes\\ProjetoFilmes.csproj",
       "projectName": "ProjetoFilmes",
-      "projectPath": "C:\\Users\\fic\\Documents\\Exercicios-Dev-Manha-Livia\\JavaScript\\React\\backend\\backend\\ProjetoFilmes\\ProjetoFilmes\\ProjetoFilmes.csproj",
-      "packagesPath": "C:\\Users\\fic\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fic\\Documents\\Exercicios-Dev-Manha-Livia\\JavaScript\\React\\backend\\backend\\ProjetoFilmes\\ProjetoFilmes\\obj\\",
+      "projectPath": "C:\\Users\\priscila.gigueira\\Desktop\\SENAI-ESTUDOS\\backend\\01.filmes\\backend\\ProjetoFilmes\\ProjetoFilmes\\ProjetoFilmes.csproj",
+      "packagesPath": "C:\\Users\\priscila.gigueira\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\priscila.gigueira\\Desktop\\SENAI-ESTUDOS\\backend\\01.filmes\\backend\\ProjetoFilmes\\ProjetoFilmes\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\fic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\priscila.gigueira\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12502,7 +12500,6 @@
             "version": "[2.1.14, )"
           },
           "Microsoft.NETCore.App": {
-            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
@@ -12525,16 +12522,10 @@
           }
         },
         "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48"
+          "net461"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }
