@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from '../../assets/images/logo.png';
 import '../../assets/global.css';
 import './style.css';
@@ -18,11 +18,14 @@ const Header: React.FunctionComponent<HeaderProps> = (props) => {
 
   const logout = () => {
     localStorage.removeItem('token-filmes');
+    localStorage.removeItem('permissao');
     history.push('/')
   }
 
   const menu = () => {
     const token = localStorage.getItem('token-filmes');
+    const permissao = localStorage.getItem('permissao');
+
     if (token === undefined || token === null) {
       return(
         <ul className="menu">
@@ -33,15 +36,26 @@ const Header: React.FunctionComponent<HeaderProps> = (props) => {
       )
     }
     else{
-      return(
-        <ul className="menu">
-        <li><Link to="/" className="link">Home</Link></li>
-        <li><Link to="/perfil" className="link">Perfil</Link></li>
-        <li><Link to="/filmes" className="link">Filmes</Link></li>
-        <li><Link to="/genero" className="link">Gêneros</Link></li>
-        <li><Link to="" onClick={event => {event.preventDefault(); logout()}}>Logout</Link></li>
-      </ul>
-      )
+      if(permissao === 'Administrador'){
+        return(
+          <ul className="menu">
+          <li><Link to="/" className="link">Home</Link></li>
+          <li><Link to="/perfil" className="link">Perfil</Link></li>
+          <li><Link to="/filmes" className="link">Filmes</Link></li>
+          <li><Link to="/genero" className="link">Gêneros</Link></li>
+          <li><Link to="" onClick={event => {event.preventDefault(); logout()}}>Logout</Link></li>
+        </ul>
+        )
+      }
+      else{
+        return(
+          <ul className="menu">
+          <li><Link to="/" className="link">Home</Link></li>
+          <li><Link to="/listar-filmes" className="link">Lista de Filmes</Link></li>
+          <li><Link to="" onClick={event => {event.preventDefault(); logout()}}>Logout</Link></li>
+        </ul>
+        )
+      }
     }
   }
 

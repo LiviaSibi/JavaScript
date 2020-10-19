@@ -32,6 +32,7 @@ function Login() {
     .then (dados => {
       if (dados.token !== undefined) {
         localStorage.setItem('token-filmes', dados.token)
+        localStorage.setItem('permissao', dados.permissao)
         history.push('/')
       }
       else{

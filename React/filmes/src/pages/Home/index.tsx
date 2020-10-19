@@ -29,7 +29,7 @@ function Home() {
               </div>
             </div>
 
-            <div className="theater">
+            <div className="categorias">
               <img id="theater" src={theater} alt="máscaras de teatro"/>
               <div className="text">
                 <h2>Categoria</h2>
