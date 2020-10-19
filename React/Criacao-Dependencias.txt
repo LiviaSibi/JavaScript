@@ -14,3 +14,10 @@ yarn create react-app nome --template typescript
 ----Add Routes----
 yarn add react-router-dom
 yarn add @types/react-router-dom -D
+
+
+----Bootstrap----
+yarn install react-bootstrap bootstrap
+-biblioteca: react-bootstrap
+-entrar no site do bootstrap para ver layouts
+-procurar os imports necessários 
