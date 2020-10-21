@@ -3,6 +3,8 @@ import logo from '../../assets/images/logo.png';
 import '../../assets/global.css';
 import './style.css';
 import {Link, useHistory} from 'react-router-dom';
+import {parseJwt} from '../../services/auth'
+import { parse } from 'path';
 
 // description = props obrigatoria
 // text = props não obrigatoria (é a ?)
@@ -24,7 +26,6 @@ const Header: React.FunctionComponent<HeaderProps> = (props) => {
 
   const menu = () => {
     const token = localStorage.getItem('token-filmes');
-    const permissao = localStorage.getItem('permissao');
 
     if (token === undefined || token === null) {
       return(
@@ -36,7 +37,7 @@ const Header: React.FunctionComponent<HeaderProps> = (props) => {
       )
     }
     else{
-      if(permissao === 'Administrador'){
+      if(parseJwt().role === "Administrador"){
         return(
           <ul className="menu">
           <li><Link to="/" className="link">Home</Link></li>
